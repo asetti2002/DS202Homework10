@@ -42,5 +42,18 @@ head(new_df2)
 ```{r}
 df3 <- merge(df,new_df2, by =c("ST_CASE"))
 df3
+```
 
+
+
+
+```{r, echo=TRUE}
+df3 %>% ggplot(aes(x = DAY_WEEK)) + geom_bar()
+table(df3$DAY_WEEK)
+
+df3 %>% ggplot(aes(x = HOUR.x)) + geom_bar()
+
+
+df3 %>% ggplot(aes(x = DRUNK_DR)) + geom_bar()
+table(df3$DRUNK_DR)
 ```
