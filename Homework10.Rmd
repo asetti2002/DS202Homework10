@@ -33,4 +33,9 @@ table(df$DRUNK_DR)
 ```
 
 
-
+```{r, echo=TRUE}
+df2 <- read.csv("person.csv")
+head(df2)
+new_df2 <- df2 %>% filter(PER_TYP %in% c(1))
+head(new_df2)
+```
