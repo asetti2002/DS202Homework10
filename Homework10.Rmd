@@ -1,0 +1,36 @@
+---
+title: "Homework2"
+author: "Akash Setti, Anuraag Pujari, Gauthaman Sethupathy, Siddarthan Prakash"
+date: "4/20/2022"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+df <- read.csv("accident.csv")
+head(df)
+df %>% ggplot(aes(x = LONGITUD, y = LATITUDE)) + geom_point()
+```
+
+
+```{r, echo=TRUE}
+df %>% ggplot(aes(x = DAY_WEEK)) + geom_bar()
+table(df$DAY_WEEK)
+
+df %>% ggplot(aes(x = HOUR)) + geom_bar()
+table(df$HOUR)
+
+df %>% ggplot(aes(x = DRUNK_DR)) + geom_bar()
+table(df$DRUNK_DR)
+```
+
+
+
