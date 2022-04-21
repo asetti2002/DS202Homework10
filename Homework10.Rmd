@@ -31,7 +31,8 @@ table(df$HOUR)
 df %>% ggplot(aes(x = DRUNK_DR)) + geom_bar()
 table(df$DRUNK_DR)
 ```
-
+There are more accidents on the 7th day on the week than any other day.
+The most accidents also happen during night time, between 17-20 hr with them all being above 1900
 
 ```{r, echo=TRUE}
 df2 <- read.csv("person.csv")
@@ -57,3 +58,5 @@ df3 %>% ggplot(aes(x = HOUR.x)) + geom_bar()
 df3 %>% ggplot(aes(x = DRUNK_DR)) + geom_bar()
 table(df3$DRUNK_DR)
 ```
+
+There are 12,453 number of accidents with at least 1 one driver.
