@@ -39,3 +39,8 @@ head(df2)
 new_df2 <- df2 %>% filter(PER_TYP %in% c(1))
 head(new_df2)
 ```
+```{r}
+df3 <- merge(df,new_df2, by =c("ST_CASE"))
+df3
+
+```
