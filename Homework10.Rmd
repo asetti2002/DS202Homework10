@@ -1,5 +1,5 @@
 ---
-title: "Homework2"
+title: "Homework10"
 author: "Akash Setti, Anuraag Pujari, Gauthaman Sethupathy, Siddarthan Prakash"
 date: "4/20/2022"
 output:
@@ -31,8 +31,11 @@ table(df$HOUR)
 df %>% ggplot(aes(x = DRUNK_DR)) + geom_bar()
 table(df$DRUNK_DR)
 ```
+
+
 There are more accidents on the 7th day on the week than any other day.
-The most accidents also happen during night time, between 17-20 hr with them all being above 1900
+The most accidents also happen during night time, between 17-20 hr with them all being above 1900.
+There are 12,453 number of accidents with at least 1 one drunk driver.
 
 ```{r, echo=TRUE}
 df2 <- read.csv("person.csv")
@@ -42,7 +45,7 @@ head(new_df2)
 ```
 ```{r}
 df3 <- merge(df,new_df2, by =c("ST_CASE"))
-df3
+head(df3)
 ```
 
 
@@ -54,9 +57,10 @@ table(df3$DAY_WEEK)
 
 df3 %>% ggplot(aes(x = HOUR.x)) + geom_bar()
 
-
-df3 %>% ggplot(aes(x = DRUNK_DR)) + geom_bar()
-table(df3$DRUNK_DR)
+df3 %>% ggplot(aes(x = SEX)) + geom_bar()
+table(df3$SEX)
 ```
 
-There are 12,453 number of accidents with at least 1 one driver.
+
+github link: https://github.com/asetti2002/DS202Homework10
+
